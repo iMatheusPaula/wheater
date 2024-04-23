@@ -51,8 +51,8 @@ async function searchCity() {
 }
 </script>
 <template>
-  <main class="h-screen grid place-items-center bg-gray-900">
-    <div class="bg-white p-4 w-96 rounded-2xl lg:w-1/4">
+  <main class="h-screen grid place-items-center bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <div class="bg-white p-4 w-96 rounded-2xl bg-opacity-40 shadow-2xl">
       <!-- SEARCH BOX -->
       <div class="flex items-center justify-between w-full">
         <font-awesome-icon icon="fa-solid fa-location-dot" class="text-2xl" />
@@ -61,7 +61,7 @@ async function searchCity() {
         >
         <font-awesome-icon
             icon="fa-solid fa-magnifying-glass"
-            class="text-gray-900 bg-blue-100 rounded-full text-2xl p-2 cursor-pointer hover:text-white"
+            class="text-gray-900 bg-blue-100 bg-opacity-40 rounded-full text-2xl p-2 cursor-pointer hover:text-white"
             @click="searchCity()"
         />
       </div>
@@ -77,7 +77,7 @@ async function searchCity() {
         <p class="text-2xl capitalize">{{state.response.description}}</p>
       </div>
       <!-- DETAILS -->
-      <div class="w-full flex justify-between mt-8" v-if="state.hasResponse">
+      <div class="w-full flex justify-between mt-8 px-6" v-if="state.hasResponse">
         <div class="flex items-center w-1/2 h-24 pl-5 justify-start">
           <font-awesome-icon icon="fa-solid fa-water" class="text-gray-900 text-2xl mr-2" />
           <div>
